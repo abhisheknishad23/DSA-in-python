@@ -46,7 +46,25 @@ class DoublyLL:
         t.next=temp
         temp.prev=t
 
-        
+    #delete element
+    def deleteDll(self,value):
+        if(self.head==None):
+            print('LL is empty')
+            return
+        t= self.head
+        if(t.data==value):
+            self.head=t.next
+            self.head.prev=None
+            return
+        while(t.next!=None):
+            if(t.data==value):
+                t.prev.next=t.next
+                t.next.prev=t.prev
+                return
+            else:
+                t=t.next
+        if(t.data==value):
+            t.prev.next=None
 
     def printDLL(self):
         t1=self.head
@@ -62,4 +80,6 @@ obj.insertAtEnd(15)
 obj.insertAtEnd(20)
 obj.insertAtBeg(1)
 obj.insertAtMid(13,10)
+obj.deleteDll(1)
+obj.deleteDll(13)
 obj.printDLL()
