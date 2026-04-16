@@ -30,4 +30,5 @@ root.left.left=Node(2)
 root.left.right=Node(4)
 root.right.right=Node(8)
 
-InOrder(root)
+#InOrder(root)
+PostOrder(root)
