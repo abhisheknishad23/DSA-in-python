@@ -46,6 +46,7 @@ def InOrder(root):
         InOrder(root.left)
         print(root.data,end=" ")
         InOrder(root.right)
+        
 
 root = Node(20)
 root.left=Node(15)
